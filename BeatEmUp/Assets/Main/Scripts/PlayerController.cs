@@ -84,7 +84,7 @@ namespace Controllers {
 		{
             if(groundCheckPos != null)
             {
-                Gizmos.color = Color.yellow;
+                Gizmos.color = Color.magenta;
                 Gizmos.DrawWireSphere(groundCheckPos.position, groundCheckRadius);
             }
 
@@ -96,7 +96,7 @@ namespace Controllers {
 
             if(ceilingCheckPos != null)
             {
-                Gizmos.color = Color.red;
+                Gizmos.color = Color.magenta;
                 Gizmos.DrawWireSphere(ceilingCheckPos.position, ceilingCheckRadius);
             }
 		}
