@@ -196,7 +196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4505592191810064, guid: 8fe3f2d80565d4f169042b67081250ba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4505592191810064, guid: 8fe3f2d80565d4f169042b67081250ba, type: 2}
       propertyPath: m_LocalPosition.z
@@ -235,6 +235,11 @@ Prefab:
     - target: {fileID: 4649728629613102, guid: 8fe3f2d80565d4f169042b67081250ba, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 114502902319036690, guid: 8fe3f2d80565d4f169042b67081250ba,
+        type: 2}
+      propertyPath: attackPower
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fe3f2d80565d4f169042b67081250ba, type: 2}
@@ -540,6 +545,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1389400398237698, guid: a55f161a942ad4e1cb536589f575a67a,
     type: 2}
   m_PrefabInternal: {fileID: 1617182820}
+--- !u!114 &660907171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 660907170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219ef82d3302c4329ba319fa719f7d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!61 &660907172
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -615,7 +632,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4002317684455474, guid: a55f161a942ad4e1cb536589f575a67a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 18.41
+      value: -10.1
       objectReference: {fileID: 0}
     - target: {fileID: 4002317684455474, guid: a55f161a942ad4e1cb536589f575a67a, type: 2}
       propertyPath: m_LocalPosition.y

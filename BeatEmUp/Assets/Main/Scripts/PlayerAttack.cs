@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BaseClasses;
 
 namespace Controllers {
 
@@ -10,10 +11,9 @@ namespace Controllers {
 
         public Transform attackPoint;
         public float attackRange;
+        public float attackPower;
 
         public LayerMask attackLayers;
-
-        private Collider2D[] collisions = new Collider2D[3];
 
 		private void Update()
 		{
@@ -35,11 +35,12 @@ namespace Controllers {
 		private void Attack()
         {
             playerAnimator.SetBool("Attack", true);
+            Collider2D[] hitEntities = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, attackLayers);
 
-            int collisionCount = Physics2D.OverlapCircleNonAlloc(attackPoint.position, attackRange, collisions, attackLayers);
-
-            print(collisionCount);
-
+            for(int index = 0; index < hitEntities.Length; ++index)
+            {
+                hitEntities[index].gameObject.GetComponent<Entity>().CurrentHealth -= attackPower;
+            }
         }
 	}
 }
